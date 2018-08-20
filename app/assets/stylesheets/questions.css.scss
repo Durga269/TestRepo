@@ -1,0 +1,197 @@
+.logo_main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+img.style_image {
+    height: 72px;
+}
+.head_title {
+    position: absolute;
+    left: 76px;
+    top: 0px;
+    font-family: sans-serif;
+    color: #198bce;
+}
+.panel {
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: #198bce;
+    color: #fff;
+    font-weight: bold;	
+    font-family: Trebuchet MS, sans-serif;
+}
+.login {
+    position: absolute;
+    top: 16px;
+    left: 1064px;
+}
+.signup {
+    position: relative;
+    top: 16px;
+    left: 1170px;
+}
+.panel a {
+    color: #fff;
+    font-weight: bold;
+    font-family: Trebuchet MS, sans-serif;
+    text-decoration: none;
+}
+.login_panel {
+    position: absolute;
+    left: 348px;
+    right: 328px;
+    height: 50px;
+    background-color: #198bce;
+    color: #fff;
+    font-weight: bold;
+    font-family: Trebuchet MS, sans-serif;
+ }
+ .login_panel h1 {
+    left: 300px;
+    position: absolute;
+    top: -12px;
+}
+.content {
+    background-color: aliceblue;
+    position: absolute;
+    top: 100px;
+    right: 326px;
+    height: 300px;
+    left: 350px;
+}
+.uname_label {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    font-size: 25px;
+    color: #0e71ab;
+    font-family: Trebuchet MS, sans-serif;
+}
+.uname_field {
+    position: absolute;
+    top: 20px;
+    left: 237px;
+    border: 1px solid #bbb;
+ }
+ .mail_label {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+    font-size: 25px;
+    color: #0e71ab;
+    font-family: Trebuchet MS, sans-serif;
+}
+.mail_field {
+    position: absolute;
+    top: 45px;
+    left: 237px;
+    border: 1px solid #bbb;
+ }
+ .pswd_label {
+    position: absolute;
+    top: 65px;
+    left: 35px;
+    font-size: 25px;
+    color: #0e71ab;
+    font-family: Trebuchet MS, sans-serif;
+}
+.pswd_field {
+    position: absolute;
+    top: 70px;
+    left: 237px;
+  	border: 1px solid #bbb;
+ }
+ .retyppswd_label {
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    font-size: 25px;
+    color: #0e71ab;
+    font-family: Trebuchet MS, sans-serif;
+}
+.retyppswd_field {
+    position: absolute;
+    top: 95px;
+    left: 237px;
+  	border: 1px solid #bbb;
+ }
+ .submit {
+    position: absolute;
+    top: 150px;
+    left: 302px;
+}
+input[type="submit"] {
+    font-size: 27px;
+    color: #3884b1;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #c4dff3;
+}
+.home_page {
+    position: absolute;
+    top: 253px;
+    left: 800px;
+}
+.home_page a {
+   	text-decoration: none;
+    font-size: 27px;
+    color: #3884b1;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #c4dff3;
+}
+table {
+    position: absolute;
+    top: 117px;
+}
+.panel p {
+    position: absolute;
+    left: 13px;
+}
+th, td {
+    border-right: 1px solid #ddd;
+}
+.edit_content {
+    position: absolute;
+    top: 100px;
+    left: 12px;
+    right: 0px;
+	font-family: Trebuchet MS, sans-serif;
+}
+.answer {
+    position: absolute;
+    top: 100px;
+}
+.question {
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    background-color: aliceblue;
+}
+.edit_title {
+    border: hidden;
+    height: 27px;
+    width: 1400px;
+}
+.show_article {
+    position: absolute;
+    top: 111px;
+}
+.new_content {
+    position: absolute;
+    top: 100px;
+}
+.question {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: 16px;
+}
+.question_submit {
+    position: absolute;
+    top: 391px;
+    left: 31px;
+}

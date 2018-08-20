@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+.flash_message {
+    position: absolute;
+    top: 359px;
+    left: 500px;
+    z-index: 1;
+    font-family: Trebuchet MS, sans-serif;
+}
+div#user_nav {
+    position: absolute;
+    top: 82px;
+    left: 1190px;
+    z-index: 1;
+    font-family: Trebuchet MS, sans-serif;
+    color: white;
+}
+
+
+#user_nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.post_question {
+    position: absolute;
+    left: -110px;
+}

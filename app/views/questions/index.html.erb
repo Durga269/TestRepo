@@ -1,0 +1,29 @@
+
+<div class="panel">
+	<p>My Articles</p>
+	<div class="login">
+		
+    
+		
+	</div>
+
+</div>
+ 
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Edit Question</th>
+    <th>View/Answer</th>
+    <th>Delete Post</th>
+  </tr>
+ 
+  <% @question.each do |question| %>
+    <tr>
+		<td><%= question.question %></td>
+      <td><%= link_to 'Update Question', edit_question_path(question) %></td>
+      <td><%= link_to 'View / Answer', question_path(question) %></td>
+      <td><%= link_to 'Delete Question', question_path(question),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

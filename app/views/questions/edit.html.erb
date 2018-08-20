@@ -1,0 +1,28 @@
+<div class="panel">
+	<p>My Question</p>
+	<div class="login">
+		<%= link_to 'Home', home_path %> |
+<%= link_to 'Answer', edit_question_path(@question) %> 
+
+	</div>
+ <%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@question.errors.count, "error") %> prohibited
+        this question from being saved:</h2>
+    <ul>
+    <% @question.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <div class="question">
+<br>    <%= f.text_area :question %>
+  </div>
+  
+  <div class="question_submit">
+    <%= f.submit %>
+  </div>
+<% end %>

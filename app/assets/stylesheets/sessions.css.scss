@@ -1,0 +1,35 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login_content {
+    background-color: aliceblue;
+    position: absolute;
+    top: 130px;
+    right: 600px;
+    height: 300px;
+    left: 350px;
+    font-family: Trebuchet MS, sans-serif;
+}
+input#password, input#email{
+	border: 1px solid #bbb;
+}
+.email {
+    position: absolute;
+    top: 0px;
+    left: 165px;
+}
+.password {
+    position: absolute;
+    top: 68px;
+    left: 165px;
+}
+.submit_button {
+    position: absolute;
+    top: 150px;
+    left: 189px;
+}
+.login_home {
+    position: absolute;
+    top: 16px;
+    left: 1000px;
+}
