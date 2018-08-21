@@ -1,4 +1,4 @@
-
+<% provide(:title,'Sign In') %>
 <div class="panel">
 	<p>My Articles</p>
 	<div class="login">
@@ -20,10 +20,14 @@
   <% @question.each do |question| %>
     <tr>
 		<td><%= question.question %></td>
+    <% if current_user %>
       <td><%= link_to 'Update Question', edit_question_path(question) %></td>
       <td><%= link_to 'View / Answer', question_path(question) %></td>
       <td><%= link_to 'Delete Question', question_path(question),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% else %>
+    <%= link_to 'Log In', new_session_path %>
+  <% end %>
     </tr>
   <% end %>
 </table>

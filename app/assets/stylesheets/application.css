@@ -38,3 +38,6 @@ div#user_nav {
     position: absolute;
     left: -110px;
 }
+.render_form{
+    position: absolute;
+}

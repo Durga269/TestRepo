@@ -27,7 +27,7 @@ img.style_image {
 .login {
     position: absolute;
     top: 16px;
-    left: 1064px;
+    left: 1034px;
 }
 .signup {
     position: relative;
@@ -194,4 +194,12 @@ th, td {
     position: absolute;
     top: 391px;
     left: 31px;
+}
+.answer {
+    position: absolute;
+    top: 148px;
+}
+textarea#question_question {
+    width: 500px;
+    height: 100px;
 }

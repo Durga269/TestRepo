@@ -1,8 +1,8 @@
+<% @title="Home" %>
 <div class="panel">
 	<p>My Articles</p>
 	<div class="login">
 		<%= link_to 'Home', home_path %> |
-<%= link_to 'Answer', edit_question_path(@question) %> 
 
 	</div>
 
@@ -13,25 +13,18 @@
   <%= @question.question %>
 </p>
 </div>
-
+<div class="answer">
 <h2>Answers</h2>
-<% @question.answers.each do |anwer| %>
+<% @question.answers.each do |answer| %>
  
   <p>
     <b>Answer:</b>
     <%= answer.answer %>
   </p>
 <% end %>
-<h2>Answers</h2>
+<%= render :partial => 'answers/form', :locals => { :question => @question, :answer => @question.answers.build } %>
+</div>
 
-<h2>Add a answer:</h2>
-<%= form_for([@question, @question.answers.build]) do |f| %>
 
-  <div class="field">
-    <%= f.label :answer %><br />
-    <%= f.text_area :answer %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %> 
+
+

@@ -2,7 +2,11 @@ Demo::Application.routes.draw do
 
 resources :sessions
 resources :questions do
-resources :answers
+  resources :answers do
+  	collection do 
+  		post :create
+  	end 
+end
 end
   get "home" => "questions#index"
   get "log_out" => "sessions#destroy"

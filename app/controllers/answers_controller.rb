@@ -1,8 +1,17 @@
 class AnswersController < ApplicationController
-  def create
-    @question = Question.find(params[:question_id])
-    @answer = @question.answers.create(params[:answer])
-    redirect_to home_path(@question)
-  end
+	before_filter :question_answer ,only: [:create]
 
+	def create
+		if @answer.save 
+		   redirect_to home_path
+		else 
+		   redirect_to
+		end
+ 	end
+
+ 	private
+ 	def question_answer
+ 		@answer = Answer.new(params[:answer])
+		@answer.question = Question.find(params[:question_id])
+ 	end
 end

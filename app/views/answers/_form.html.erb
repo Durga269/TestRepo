@@ -1,0 +1,18 @@
+<div class="render_form">
+<% @question = question
+   @answer = answer 
+ %>
+
+<h2>Add your answer:</h2>
+
+
+<%= form_for(@answer, :url => question_answers_path(@answer.question), :method => 'post') do |f| %>
+  <div class="field">
+    <%= f.text_area :answer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>
