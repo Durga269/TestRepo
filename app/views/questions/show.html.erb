@@ -20,8 +20,11 @@
   <p>
     <b>Answer:</b>
     <%= answer.answer %>
-  </p>
+<div class = "votes">
+<%= render :partial => 'votes/form', :locals => {:answer => answer, :vote => answer.votes.build} %>
+  </div></p>
 <% end %>
+
 <%= render :partial => 'answers/form', :locals => { :question => @question, :answer => @question.answers.build } %>
 </div>
 
