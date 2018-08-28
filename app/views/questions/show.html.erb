@@ -1,4 +1,3 @@
-<% @title="Home" %>
 <div class="panel">
 	<p>My Articles</p>
 	<div class="login">
@@ -19,13 +18,18 @@
  
   <p>
     <b>Answer:</b>
-    <%= answer.answer %>
+    <%= answer.answer %> <br><br>Posted on 	
+	<%= answer.created_at.to_date.iso8601%> by 
+	<%= User.find(answer.user_id).email %>
 <div class = "votes">
 <%= render :partial => 'votes/form', :locals => {:answer => answer, :vote => answer.votes.build} %>
   </div></p>
 <% end %>
-
+  <% if current_user %>
 <%= render :partial => 'answers/form', :locals => { :question => @question, :answer => @question.answers.build } %>
+<% else %>
+Login to answer
+<% end %>
 </div>
 
 

@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
-before_filter :vote_param ,only: [:create]
+
+	before_filter :vote_param ,only: [:create]
 
 	def create
 		if @vote.save
@@ -10,26 +11,16 @@ before_filter :vote_param ,only: [:create]
  	end
 
  	private
- 	def vote_param
- 		if Vote.find(:all, :conditions => { :answer_id => Answer.find(params[:answer_id])}).count > 0 
- 			@vote = Vote.find(:all, :conditions => { :answer_id => Answer.find(params[:answer_id])})
- 			if (@vote[0].answer.user_id == session[:user_id])
- 				redirect_to home_path, :notice => "You could not like your own post"
- 			else
- 				@vote.each do |vote|
- 					if (vote.user_id == session[:user_id])
- 						redirect_to home_path, :notice => "Already Liked"
- 					end
- 				end
- 			end
- 		elsif Answer.find(params[:answer_id]).user_id == session[:user_id]
- 			redirect_to home_path, :notice => "You could not like your own post"
+ 	 	def vote_param
+ 		if current_user.answers.where("id = #{params[:answer_id]}").count > 0
+ 	 		redirect_to home_path, :notice => "You could not like your own post"
+ 		elsif current_user.votes.where("answer_id = #{params[:answer_id]}").count > 0
+ 	 		redirect_to home_path, :notice => "Already Liked"
  		else
  			@vote = Vote.new(params[:vote])
 			@vote.votes = 1
  			@vote.answer = Answer.find(params[:answer_id])
-			@vote.user_id = session[:user_id]	
+			@vote.user_id = current_user	
  		end
-		
  	end
 end

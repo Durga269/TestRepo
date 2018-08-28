@@ -2,8 +2,8 @@ Demo::Application.routes.draw do
 
 resources :sessions
 resources :questions do
-	resources :answers do
-  		resources :votes do
+	resources :answers , only: [:create] do
+  		resources :votes , only: [:create]do
   			collection do 
   				post :create
   			end 

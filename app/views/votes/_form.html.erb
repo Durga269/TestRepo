@@ -1,5 +1,6 @@
 <%  @answer = answer 
 	@vote = vote	%>
 	<%= form_for(@vote,:url => question_answer_votes_path(@answer.question,@vote.answer), :method => 'post') do |f| %>
-		<%= f.submit %>
+		<%= f.submit "UpVote" %>
+	<%= Vote.find(:all, :conditions => {:answer_id => @answer.id}).count %> Vote(s)
 	<%end %>
